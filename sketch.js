@@ -16,14 +16,14 @@ function setup() {
 
 	engine = Engine.create();
 	world = engine.world;
-	dustbinsprite = createSprite(700,220)
+	dustbinsprite = createSprite(700,300)
 	dustbinsprite.addImage(dustbinimage)
-	
+	dustbinsprite.scale = 0.5
 	paperbody = new Paper2(100,100,50)
 	groundbody = new Ground(500,390,1000,20)
-	dustbinleftbody = new Dustbin(600,330,10,100)
+	dustbinleftbody = new Dustbin(650,330,10,100)
 
-	dustbinrightbody = new Dustbin(800,330,10,100)
+	dustbinrightbody = new Dustbin(750,330,10,100)
 	
 	dustbinbottombody = new Dustbin (700,375,100,10)
 	Engine.run(engine);
@@ -45,7 +45,7 @@ function draw() {
 }
 function keyPressed(){
 	if (keyCode === UP_ARROW)
-	Matter.Body.applyForce(paperbody.body, paperbody.body.position, {x:15, y:-15});  		
+	Matter.Body.applyForce(paperbody.body, paperbody.body.position, {x:40, y:-35});  		
 
 }
 
